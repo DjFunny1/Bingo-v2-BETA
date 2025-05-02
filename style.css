@@ -71,9 +71,8 @@ button {
 #signupButton {
     background-image: linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%);
     margin: 10px;
-    padding: 15px 45px;
+    padding: 10px 25px;
     text-align: center;
-    text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
     color: white;            
@@ -87,9 +86,6 @@ button {
     text-decoration: none;
 }
 
-#signupButton:hover {
-    background-color: #9c27b0;
-}
 
 #callButton {    
     background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
@@ -187,24 +183,6 @@ button {
     border-radius: 10px;
 }
 #volumeButton:hover {
-    background-position: right center;
-    color: #fff;
-    text-decoration: none;
-}
-
-#captureButton {
-    background-image: linear-gradient(to right, #000046 0%, #1CB5E0  51%, #000046  100%);
-    margin: 10px;
-    padding: 10px 15px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-}
-#captureButton:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
@@ -352,27 +330,101 @@ body .card {
     text-decoration: underline;
 }
 
-#captureContainer {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+#colorSelect {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
 }
 
-#captureImage {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
+.marked-red {
+    background-color: red;
+    text-decoration: line-through;
 }
 
-#signupTable {
+.marked-black {
+    background-color: #000000;
+    text-decoration: line-through;
+    color: white;
+}
+
+.marked-blue {
+    background-color: #0000FF;
+    text-decoration: line-through;
+    color: white;
+}
+
+.marked-pink {
+    background-color: #FF69B4;
+    text-decoration: line-through;
+}
+
+.marked-yellow {
+    background-color: #FFFF00;
+    text-decoration: line-through;
+}
+
+.marked-cyan {
+    background-color: #00FFFF;
+    text-decoration: line-through;
+}
+
+.marked-green {
+    background-color: #008000;
+    text-decoration: line-through;
+    color: white;
+}
+
+.marked-purple {
+    background-color: #800080;
+    text-decoration: line-through;
+    color: white;
+}
+
+.marked-orange {
+    background-color: #FFA500;
+    text-decoration: line-through;
+}
+
+.marked-gray {
+    background-color: #808080;
+    text-decoration: line-through;
+    color: white;
+}
+
+.modal {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    width: 80%;
-    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    max-width: 900px;
+    width: 90%;
+    margin: 50px auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 1001;
 }
 
 .signup-table {
@@ -380,16 +432,24 @@ body .card {
     border-collapse: collapse;
 }
 
-.signup-table td {
+.signup-table th, .signup-table td {
     padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    width: 16.66%;
+}
+
+.signup-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
 }
 
 .signup-input {
     padding: 8px;
-    font-size: 16px;
+    font-size: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
+    width: 75%;
 }
 
 .signup-button {
@@ -418,17 +478,32 @@ body .card {
     background-color: #b71c1c;
 }
 
-#playerList {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0;
+.delete-all-players-button {
+    background-color: #c62828;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#playerList li {
-    padding: 5px 0;
-    font-size: 16px;
+.delete-all-players-button:hover {
+    background-color: #b71c1c;
 }
 
+.delete-player-button {
+    background-color: #ef5350;
+    color: white;
+    padding: 3px 6px;
+    border: none;
+    border-radius: 75%;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.delete-player-button:hover {
+    background-color: #e53935;
+}
 
 /* FIRMA DJFUNNY */
 .content {
